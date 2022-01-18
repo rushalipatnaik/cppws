@@ -15,14 +15,14 @@ bool powerOf2(ll n){if(n==0){return 0;} return (ceil(log2(n))== floor(log2(n)));
 
 
 void solve(){
- int a[5][5]; int x;
+ int a[5][5]; int y;
  for(int i=0;i<5;i++){
      for(int j=0;j<5;j++){
          cin>>a[i][j];
          if(a[i][j]==1)
-          x=abs(2-i)+abs(2-j);  
+          y=abs(2-i)+abs(2-j);  
      }
- } cout<<x;
+ } cout<<y;
 }
 
 
