@@ -15,9 +15,11 @@ bool powerOf2(ll n){if(n==0){return 0;} return (ceil(log2(n))== floor(log2(n)));
 
 
 void solve(){
- int n; cin>>n;
+ int n; cin>>n; int c=0;
  string s; cin>>s;
- 
+   for(int i=1;i<n;i++){
+       if(s[i]==s[i-1]) c++;
+   } cout<<c;
 }
 
 
