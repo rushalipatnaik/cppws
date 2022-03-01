@@ -13,35 +13,43 @@ bool powerOf2(ll n){if(n==0){return 0;} return (ceil(log2(n))== floor(log2(n)));
 
 
 void solve(){
- ll n; cin>>n;
- arr(s,n); ll x=0, y=0;
- ll i=0, j=n-1;
- if(x<y){
-      x=x+s[i];
-      i++;
- }
- else {
-     y=y+s[j];
-     j--;}
-
- while(1){
-     if(i==j) break;
-   if(x<y){
-       i++;
-       x=x+s[i];
-   }else{
-       j--;
-       y=y+s[j];
-   }
- } cout<<min(x,y)<<endl;
+ ll t;cin>>t;
+    while (t--){
+        ll n;cin>>n;
+        vector<ll> v(n);
+        for(ll i=0;i<n;i++){
+            cin>>v[i];
+        }
+        if(n==1){
+            cout<<v[0]<<endl;
+            continue;
+        }
+        else{
+        vector<ll> p(n),s(n);     
+        p[0]=v[0]; 
+        s[n-1]=v[n-1]; 
+        for(ll i=1;i<n;i++) 
+        p[i]= p[i-1]+v[i]; 
+        
+        for(ll i=n-2;i>=0;i--) 
+        s[i]=s[i+1]+v[i]; 
+        
+        ll answer = LONG_LONG_MAX;     
+        for(int i=0;i<n-1;i++) { 
+        answer = min(answer,max(p[i],s[i+1])); 
+        } 
+     cout<<answer<<endl; 
+    }
+}
 }
 
 
 int32_t main(){
 fast
 ll t=1;
-cin>>t;
+//cin>>t;
 while(t--)
 solve();
 return 0;
 }
+
