@@ -15,17 +15,17 @@ bool powerOf2(ll n){if(n==0){return 0;} return (ceil(log2(n))== floor(log2(n)));
 
 
 void solve(){
- string s; cin>>s;
- for(ll i=0; i<s.size(); i++){
-    ll n=int(s[i]); 
- }
+ float n; cin>>n;
+ float x=n/4;
+ if(x==(int)x) cout<<"Good"<<endl;
+ else cout<<"Not Good"<<endl;
 }
 
 
 int32_t main(){
 fast
 ll t=1;
-//cin>>t;
+cin>>t;
 while(t--)
 solve();
 return 0;
