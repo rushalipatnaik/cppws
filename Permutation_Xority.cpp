@@ -14,16 +14,27 @@ ll fact(ll n){if(n==0){return 1;}return n*fact(n-1);}
 bool powerOf2(ll n){if(n==0){return 0;} return (ceil(log2(n))== floor(log2(n)));}
 
 
-void solve(){
- float x1,x2,y1,y2;
- cin>>x1>>x2>>y1>>y2;
- float c1=y1/x1;
- float c2=y2/x2;
-
- if(c1<c2) cout<<-1<<endl;
- else if(c1==c2) cout<<0<<endl;
- else cout<<1<<endl;
-
+void solve() {
+    int n;
+    cin >> n;
+    vector<int>a(n);
+    if(n == 2){
+      cout << -1 << endl;
+      return;
+    }
+    if(n & 1){
+      while(n) cout << n-- << " ";
+      cout << endl;
+      return;
+    }
+    for(int i = 0; i < n; i++) a[i] = i + 1;
+    do{
+      int x = 0;
+      for(int i = 1; i < n; i++) x = x ^ (a[i] - a[i - 1]);
+      if(x == 0) break;
+    }while(next_permutation(a.begin(),a.end()));
+    for(auto x: a) cout << x << " ";
+    cout << endl;
 }
 
 

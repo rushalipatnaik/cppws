@@ -15,15 +15,9 @@ bool powerOf2(ll n){if(n==0){return 0;} return (ceil(log2(n))== floor(log2(n)));
 
 
 void solve(){
- float x1,x2,y1,y2;
- cin>>x1>>x2>>y1>>y2;
- float c1=y1/x1;
- float c2=y2/x2;
-
- if(c1<c2) cout<<-1<<endl;
- else if(c1==c2) cout<<0<<endl;
- else cout<<1<<endl;
-
+ ll n; cin>>n;
+ if(n+3<=10) cout<<"Yes"<<endl;
+ else cout<<"No"<<endl;
 }
 
 
