@@ -19,7 +19,7 @@ void solve(){
  if(x%2==0 && y%2==0) cout<<"Janmansh"<<endl;
  else if(x%2==0 && y%2!=0) cout<<"Jay"<<endl;
  else if(x%2!=0 && y%2==0) cout<<"Jay"<<endl;
- else(x%2!=0 && y%2!=0) cout<<"Janmansh"<<endl;
+ else if(x%2!=0 && y%2!=0) cout<<"Janmansh"<<endl;
 }
 
 
